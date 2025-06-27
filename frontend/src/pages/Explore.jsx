@@ -70,14 +70,17 @@ export default function Explore() {
 
             <div className="grid md:grid-cols-3 gap-4 mb-6">
 
-                <input
-                    type="number"
+                <select
                     name="year"
-                    placeholder="Year"
                     value={filters.year}
                     onChange={handleFilter}
-                    className="p-2 bg-gray-800 text-white rounded outline-none w-full"
-                />
+                    className="p-2 bg-gray-800 text-white rounded w-full"
+                >
+                    <option value="">All Years</option>
+                    {Array.from({ length: 26 }, (_, i) => 2025 - i).map(year => (
+                        <option key={year} value={year}>{year}</option>
+                    ))}
+                </select>
                 <select
                     name="type"
                     value={filters.type}
@@ -104,22 +107,28 @@ export default function Explore() {
 
 
             <div className="flex flex-wrap gap-3 mb-6">
-                {genres.map(g => (
-                    <label
-                        key={g}
-                        className="text-xs md:text-sm text-white bg-gray-700 p-2 rounded cursor-pointer hover:bg-red-500 "
-                    >
-                        <input
-                            type="checkbox"
-                            name="genres"
-                            value={g}
-                            checked={filters.genres.includes(g)}
-                            onChange={handleFilter}
-                            className="mr-1"
-                        />
-                        {g}
-                    </label>
-                ))}
+                {genres.map(g => {
+                    const isChecked = filters.genres.includes(g); // check if selected
+
+                    return (
+                        <label
+                            key={g}
+                            className={`text-xs md:text-sm px-3 py-2 rounded cursor-pointer transition
+        ${isChecked ? 'bg-red-600 text-white' : 'bg-gray-700 text-white'} hover:bg-red-500`}
+                        >
+                            <input
+                                type="checkbox"
+                                name="genres"
+                                value={g}
+                                onChange={handleFilter}
+                                checked={isChecked}
+                                className="mr-1 hidden"
+                            />
+                            {g}
+                        </label>
+                    );
+                })}
+
 
             </div>
             <MovieSection shows={filtered} />
