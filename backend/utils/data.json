@@ -1,0 +1,422 @@
+[
+    {
+        "name": "Inception",
+        "description": "A thief who steals corporate secrets through dream-sharing is given a task to plant an idea.",
+        "type": "Movie",
+        "pictureUrl": "../utils/images/Inception.jpg",
+        "genre": [
+            "Science fiction",
+            "Action"
+        ],
+        "year": 2010,
+        "country": "USA",
+        "episodes": null,
+        "rating": 8.8
+    },
+    {
+        "name": "Stranger Things",
+        "description": "A group of kids uncover a series of supernatural mysteries in their small town.",
+        "type": "Drama",
+        "pictureUrl": "../utils/images/Stranger_Things.jpg",
+        "genre": [
+            "Science fiction",
+            "Mystery"
+        ],
+        "year": 2016,
+        "country": "USA",
+        "episodes": 34,
+        "rating": 8.7
+    },
+    {
+        "name": "Your Name",
+        "description": "Two teenagers share a profound connection after waking up in each other's bodies.",
+        "type": "Anime",
+        "pictureUrl": "../utils/images/Your_Name.jpg",
+        "genre": [
+            "Romance",
+            "Fantasy"
+        ],
+        "year": 2016,
+        "country": "Japan",
+        "episodes": null,
+        "rating": 8.4
+    },
+    {
+        "name": "Breaking Bad",
+        "description": "A chemistry teacher turned meth producer navigates crime, family, and danger.",
+        "type": "Drama",
+        "pictureUrl": "../utils/images/Breaking_Bad.jpg",
+        "genre": [
+            "Crime",
+            "Thriller"
+        ],
+        "year": 2008,
+        "country": "USA",
+        "episodes": 62,
+        "rating": 9.5
+    },
+    {
+        "name": "Attack on Titan",
+        "description": "Humanity fights for survival against giant humanoid creatures.",
+        "type": "Anime",
+        "pictureUrl": "../utils/images/Attack_on_Titan.jpg",
+        "genre": [
+            "Action",
+            "Dystopian"
+        ],
+        "year": 2013,
+        "country": "Japan",
+        "episodes": 87,
+        "rating": 9.0
+    },
+    {
+        "name": "The Dark Knight",
+        "description": "Batman faces his greatest psychological and physical tests against the Joker.",
+        "type": "Movie",
+        "pictureUrl": "../utils/images/The_Dark_Knight.jpg",
+        "genre": [
+            "Action",
+            "Thriller"
+        ],
+        "year": 2008,
+        "country": "USA",
+        "episodes": null,
+        "rating": 9.0
+    },
+    {
+        "name": "3 Idiots",
+        "description": "Three engineering students learn life lessons beyond books.",
+        "type": "Movie",
+        "pictureUrl": "../utils/images/3_Idiots.jpg",
+        "genre": [
+            "Comedy",
+            "Drama"
+        ],
+        "year": 2009,
+        "country": "India",
+        "episodes": null,
+        "rating": 8.4
+    },
+    {
+        "name": "Death Note",
+        "description": "A student discovers a notebook that kills anyone whose name is written in it.",
+        "type": "Anime",
+        "pictureUrl": "../utils/images/Death_Note.jpg",
+        "genre": [
+            "Mystery",
+            "Thriller"
+        ],
+        "year": 2006,
+        "country": "Japan",
+        "episodes": 37,
+        "rating": 9.0
+    },
+    {
+        "name": "Money Heist",
+        "description": "A criminal mastermind plans the biggest bank heist in history.",
+        "type": "Drama",
+        "pictureUrl": "../utils/images/Money_Heist.jpg",
+        "genre": [
+            "Crime",
+            "Action/Adventure"
+        ],
+        "year": 2017,
+        "country": "Spain",
+        "episodes": 41,
+        "rating": 8.3
+    },
+    {
+        "name": "Interstellar",
+        "description": "A team travels through a wormhole in search of a new home for humanity.",
+        "type": "Movie",
+        "pictureUrl": "../utils/images/Inception.jpg",
+        "genre": [
+            "Science fiction",
+            "Drama"
+        ],
+        "year": 2014,
+        "country": "USA",
+        "episodes": null,
+        "rating": 8.6
+    },
+    {
+        "name": "Demon Slayer",
+        "description": "A boy becomes a demon slayer to save his sister and avenge his family.",
+        "type": "Anime",
+        "pictureUrl": "../utils/images/Demon_Slayer.jpg",
+        "genre": [
+            "Action",
+            "Fantasy"
+        ],
+        "year": 2019,
+        "country": "Japan",
+        "episodes": 44,
+        "rating": 8.7
+    },
+    {
+        "name": "Sherlock",
+        "description": "A modern update finds the famous sleuth solving crime in 21st century London.",
+        "type": "Drama",
+        "pictureUrl": "../utils/images/Sherlock.jpg",
+        "genre": [
+            "Mystery",
+            "Crime"
+        ],
+        "year": 2010,
+        "country": "UK",
+        "episodes": 13,
+        "rating": 9.1
+    },
+    {
+        "name": "The Matrix",
+        "description": "A hacker learns about the true nature of reality and joins the resistance.",
+        "type": "Movie",
+        "pictureUrl": "../utils/images/The_Matrix.jpg",
+        "genre": [
+            "Science fiction",
+            "Action"
+        ],
+        "year": 1999,
+        "country": "USA",
+        "episodes": null,
+        "rating": 8.7
+    },
+    {
+        "name": "Naruto",
+        "description": "A young ninja strives to become the leader of his village.",
+        "type": "Anime",
+        "pictureUrl": "../utils/images/Naruto.jpg",
+        "genre": [
+            "Action",
+            "Fantasy"
+        ],
+        "year": 2002,
+        "country": "Japan",
+        "episodes": 220,
+        "rating": 8.3
+    },
+    {
+        "name": "The Crown",
+        "description": "Chronicles the reign of Queen Elizabeth II.",
+        "type": "Drama",
+        "pictureUrl": "../utils/images/The_Crown.jpg",
+        "genre": [
+            "Historical Fiction",
+            "Drama"
+        ],
+        "year": 2016,
+        "country": "UK",
+        "episodes": 60,
+        "rating": 8.6
+    },
+    {
+        "name": "Aangan",
+        "description": "Aangan is a period drama set during the time of the partition of India and Pakistan.",
+        "type": "Drama",
+        "pictureUrl": "../utils/images/Aangan.jpg",
+        "genre": [
+            "Romance",
+            "Drama"
+        ],
+        "year": 2018,
+        "country": "Pakistan",
+        "episodes": 26,
+        "rating": 8.9
+    },
+    {
+        "name": "Humsafar",
+        "description": "A love story that turns turbulent due to family conspiracies.",
+        "type": "Drama",
+        "pictureUrl": "../utils/images/Humsafar.jpg",
+        "genre": [
+            "Romance",
+            "Drama"
+        ],
+        "year": 2011,
+        "country": "Pakistan",
+        "episodes": 23,
+        "rating": 9.0
+    },
+    {
+        "name": "Mere Paas Tum Ho",
+        "description": "A man faces betrayal in marriage and society.",
+        "type": "Drama",
+        "pictureUrl": "../utils/images/Mere_Paas_Tum_Ho.jpg",
+        "genre": [
+            "Drama",
+            "Romance"
+        ],
+        "year": 2019,
+        "country": "Pakistan",
+        "episodes": 23,
+        "rating": 8.1
+    },
+    {
+        "name": "Parizaad",
+        "description": "The journey of a dark-skinned man judged by appearance but rich in heart.",
+        "type": "Drama",
+        "pictureUrl": "../utils/images/Parizaad.jpg",
+        "genre": [
+            "Drama",
+            "Mystery"
+        ],
+        "year": 2021,
+        "country": "Pakistan",
+        "episodes": 29,
+        "rating": 9.2
+    },
+    {
+        "name": "Bin Roye",
+        "description": "A story of unrequited love, pain, and sacrifice.",
+        "type": "Movie",
+        "pictureUrl": "../utils/images/Bin_Roye.jpg",
+        "genre": [
+            "Romance",
+            "Drama"
+        ],
+        "year": 2015,
+        "country": "Pakistan",
+        "episodes": null,
+        "rating": 7.6
+    },
+    {
+        "name": "Punjab Nahi Jaungi",
+        "description": "A romantic comedy exploring cultural values and modernity.",
+        "type": "Movie",
+        "pictureUrl": "../utils/images/Punjab_Nahi_Jaungi.jpg",
+        "genre": [
+            "Comedy",
+            "Romance"
+        ],
+        "year": 2017,
+        "country": "Pakistan",
+        "episodes": null,
+        "rating": 7.4
+    },
+    {
+        "name": "Legend of the Blue Sea",
+        "description": "A mermaid from the Joseon era ends up in modern Seoul.",
+        "type": "Drama",
+        "pictureUrl": "../utils/images/Legend_of_the_Blue_Sea.jpg",
+        "genre": [
+            "Fantasy",
+            "Romance"
+        ],
+        "year": 2016,
+        "country": "South Korea",
+        "episodes": 20,
+        "rating": 8.3
+    },
+    {
+        "name": "Goblin (Guardian: The Lonely and Great God)",
+        "description": "A goblin seeks a human bride to end his immortality.",
+        "type": "Drama",
+        "pictureUrl": "../utils/images/Goblin.jpg",
+        "genre": [
+            "Fantasy",
+            "Romance"
+        ],
+        "year": 2016,
+        "country": "South Korea",
+        "episodes": 16,
+        "rating": 9.0
+    },
+    {
+        "name": "Crash Landing on You",
+        "description": "A South Korean heiress accidentally lands in North Korea.",
+        "type": "Drama",
+        "pictureUrl": "../utils/images/Crash_Landing_on_You.jpg",
+        "genre": [
+            "Romance",
+            "Drama"
+        ],
+        "year": 2019,
+        "country": "South Korea",
+        "episodes": 16,
+        "rating": 8.7
+    },
+    {
+        "name": "It's Okay to Not Be Okay",
+        "description": "A caregiver and a mysterious writer help each other heal.",
+        "type": "Drama",
+        "pictureUrl": "../utils/images/It's_Okay_to_Not_Be_Okay.jpg",
+        "genre": [
+            "Romance",
+            "Mystery"
+        ],
+        "year": 2020,
+        "country": "South Korea",
+        "episodes": 16,
+        "rating": 8.6
+    },
+    {
+        "name": "Train to Busan",
+        "description": "A zombie outbreak hits a train heading to Busan.",
+        "type": "Movie",
+        "pictureUrl": "../utils/images/Train_to_Busan.jpg",
+        "genre": [
+            "Action",
+            "Thriller"
+        ],
+        "year": 2016,
+        "country": "South Korea",
+        "episodes": null,
+        "rating": 7.6
+    },
+    {
+        "name": "Parasite",
+        "description": "A poor family schemes to become employed by a wealthy one.",
+        "type": "Movie",
+        "pictureUrl": "../utils/images/Parasite.jpg",
+        "genre": [
+            "Drama",
+            "Thriller"
+        ],
+        "year": 2019,
+        "country": "South Korea",
+        "episodes": null,
+        "rating": 8.6
+    },
+    {
+        "name": "My Love from the Star",
+        "description": "An alien stranded on Earth for 400 years falls in love.",
+        "type": "Drama",
+        "pictureUrl": "../utils/images/My_Love_from_the_Star.jpg",
+        "genre": [
+            "Fantasy",
+            "Romance"
+        ],
+        "year": 2013,
+        "country": "South Korea",
+        "episodes": 21,
+        "rating": 8.4
+    },
+    {
+        "name": "The King: Eternal Monarch",
+        "description": "A modern-day emperor crosses into a parallel world.",
+        "type": "Drama",
+        "pictureUrl": "../utils/images/The_King_Eternal_Monarch.jpg",
+        "genre": [
+            "Science fiction",
+            "Romance"
+        ],
+        "year": 2020,
+        "country": "South Korea",
+        "episodes": 16,
+        "rating": 7.9
+    },
+    {
+        "name": "Tower of God",
+        "description": "A boy enters a mysterious tower to reunite with his friend.",
+        "type": "Anime",
+        "pictureUrl": "../utils/images/Tower_of_God.jpg",
+        "genre": [
+            "Fantasy",
+            "Action"
+        ],
+        "year": 2020,
+        "country": "South Korea",
+        "episodes": 13,
+        "rating": 7.5
+    }
+]

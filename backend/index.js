@@ -7,7 +7,15 @@ app.use(cors());
 app.use(express.json());
 
 connectDB();
-// app.use("api/shows/", showRoutes);
+
+const showRouter = require("./routes/showRoutes")
+
+app.get("/", (req, res) => {
+    res.send("API is running.");
+});
+
+
+app.use("/api/shows", showRouter);
 
 const PORT = process.env.PORT || 3000;
 
