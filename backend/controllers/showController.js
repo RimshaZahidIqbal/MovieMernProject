@@ -3,15 +3,10 @@ const { GENRES, COUNTRIES } = require("../utils/showConstants");
 
 const getAllShows = async (req, res) => {
     try {
-        const page = parseInt(req.query.page) || 1;
-        const limit = 25;
-        const skip = (page - 1) * limit;
         const total = await Show.countDocuments();
-        const shows = await Show.find().skip(skip).limit(limit);
+        const shows = await Show.find().sort({ rating: 1 });
 
         res.json({
-            currentPage: page,
-            totalPages: Math.ceil(total / limit),
             totalShows: total,
             shows,
         });
@@ -19,6 +14,7 @@ const getAllShows = async (req, res) => {
         res.status(500).json({ message: err.message });
     }
 };
+
 
 const getAllShowsConstants = async (req, res) => {
     try {
