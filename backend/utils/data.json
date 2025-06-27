@@ -34,7 +34,8 @@
         "pictureUrl": "Your_Name.jpg",
         "genre": [
             "Romance",
-            "Fantasy"
+            "Fantasy",
+            "Animation"
         ],
         "year": 2016,
         "country": "Japan",
@@ -104,7 +105,8 @@
         "pictureUrl": "Death_Note.jpg",
         "genre": [
             "Mystery",
-            "Thriller"
+            "Thriller",
+            "Animation"
         ],
         "year": 2006,
         "country": "Japan",
@@ -146,7 +148,8 @@
         "pictureUrl": "Demon_Slayer.jpg",
         "genre": [
             "Action",
-            "Fantasy"
+            "Fantasy",
+            "Animation"
         ],
         "year": 2019,
         "country": "Japan",
@@ -188,7 +191,8 @@
         "pictureUrl": "Naruto.jpg",
         "genre": [
             "Action",
-            "Fantasy"
+            "Fantasy",
+            "Animation"
         ],
         "year": 2002,
         "country": "Japan",
@@ -406,13 +410,14 @@
         "rating": 7.9
     },
     {
-        "name": "Tower of God",
+        "name": "KPOP Demon Hunters",
         "description": "A boy enters a mysterious tower to reunite with his friend.",
         "type": "Anime",
         "pictureUrl": "Tower_of_God.jpg",
         "genre": [
             "Fantasy",
-            "Action"
+            "Action",
+            "Animation"
         ],
         "year": 2020,
         "country": "South Korea",

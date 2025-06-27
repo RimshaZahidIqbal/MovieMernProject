@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
     res.send("API is running.");
 });
 
-app.use('/images', express.static(path.join(__dirname, 'public/images')));
+app.use('/api/images', express.static(path.join(__dirname, 'public/images')));
 app.use("/api/shows", showRouter);
 
 const PORT = process.env.PORT || 3000;
