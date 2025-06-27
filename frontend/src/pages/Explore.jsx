@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { FaUndoAlt } from 'react-icons/fa';
-
 import api from '../utils/api';
 import { MovieSection } from '../components';
 
@@ -16,25 +15,33 @@ export default function Explore() {
     });
 
     useEffect(() => {
-        const fetchData = async () => {
+        const fetchShows = async () => {
             try {
-                const [showsRes, constantsRes] = await Promise.all([
-                    api.get('/api/shows/'),
-                    api.get('/api/shows/constant')
-                ]);
-                setShows(showsRes.data.shows);
-                setGenres(constantsRes.data.genres);
-                setCountries(constantsRes.data.countries);
+                const res = await api.get('/api/shows/');
+                setShows(res.data.shows);
             } catch (err) {
-                console.error('Error fetching data:', err);
+                console.error('Error fetching shows:', err);
             }
         };
-        fetchData();
+        fetchShows();
+    }, []);
+
+    // Fetch constants 
+    useEffect(() => {
+        const fetchConstants = async () => {
+            try {
+                const res = await api.get('/api/shows/constant');
+                setGenres(res.data.genres);
+                setCountries(res.data.countries);
+            } catch (err) {
+                console.error('Error fetching constants:', err);
+            }
+        };
+        fetchConstants();
     }, []);
 
     const handleFilter = (e) => {
         const { name, value, checked } = e.target;
-
         if (name === 'genres') {
             setFilters(prev => ({
                 ...prev,
@@ -56,7 +63,7 @@ export default function Explore() {
 
     return (
         <div className="bg-black text-white min-h-screen p-6">
-            <div className='flex justify-between '>
+            <div className='flex justify-between'>
                 <h1 className="text-2xl font-bold text-yellow-400 mb-4">Explore Shows</h1>
                 <button
                     onClick={() => setFilters({ year: '', type: '', country: '', genres: [] })}
@@ -65,11 +72,9 @@ export default function Explore() {
                     <FaUndoAlt />
                     Reset Filters
                 </button>
-
             </div>
 
             <div className="grid md:grid-cols-3 gap-4 mb-6">
-
                 <select
                     name="year"
                     value={filters.year}
@@ -105,16 +110,14 @@ export default function Explore() {
                 </select>
             </div>
 
-
             <div className="flex flex-wrap gap-3 mb-6">
                 {genres.map(g => {
-                    const isChecked = filters.genres.includes(g); // check if selected
-
+                    const isChecked = filters.genres.includes(g);
                     return (
                         <label
                             key={g}
                             className={`text-xs md:text-sm px-3 py-2 rounded cursor-pointer transition
-        ${isChecked ? 'bg-red-600 text-white' : 'bg-gray-700 text-white'} hover:bg-red-500`}
+                                ${isChecked ? 'bg-red-600 text-white' : 'bg-gray-700 text-white'} hover:bg-red-500`}
                         >
                             <input
                                 type="checkbox"
@@ -128,9 +131,8 @@ export default function Explore() {
                         </label>
                     );
                 })}
-
-
             </div>
+
             <MovieSection shows={filtered} />
         </div>
     );
