@@ -3,11 +3,8 @@ const { GENRES, COUNTRIES } = require("../utils/showConstants");
 
 const getAllShows = async (req, res) => {
     try {
-        const total = await Show.countDocuments();
         const shows = await Show.find().sort({ rating: 1 });
-
         res.json({
-            totalShows: total,
             shows,
         });
     } catch (err) {

@@ -8,8 +8,8 @@ const showSchema = new mongoose.Schema({
     name: { type: String, required: true },
     description: { type: String, required: true },
     type: { type: String, enum: TYPES, required: true },
-    picture: { type: Buffer, required: true }, // image in binary format = buffer
-    genre: { type: [String], enum: GENRES, required: true },
+    picture: { type: String, required: true },
+    genre: { type: [String], enuma: GENRES, required: true },
     year: { type: Number, required: true },
     country: { type: String, enum: COUNTRIES, required: true },
     episodes: { type: Number, default: null },
@@ -18,7 +18,6 @@ const showSchema = new mongoose.Schema({
 
 const Show = mongoose.model('Show', showSchema);
 
-// Seed data from data.json and image folder
 (async () => {
     try {
         const count = await Show.countDocuments();
@@ -26,21 +25,22 @@ const Show = mongoose.model('Show', showSchema);
             const filePath = path.join(__dirname, '../utils/data.json');
             const jsonData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
 
-            const showsWithImages = jsonData.map(show => {
+            const showsWithImageUrls = jsonData.map(show => {
                 const imageFileName = path.basename(show.pictureUrl);
-                const imagePath = path.join(__dirname, '../utils/images', imageFileName);
-                const imageBuffer = fs.readFileSync(imagePath);
+                const imageUrl = `/images/${imageFileName}`;
 
                 return {
                     ...show,
-                    picture: imageBuffer,
+                    picture: imageUrl,
                 };
             });
 
-            await Show.insertMany(showsWithImages);
-            console.log("Seeded shows with image data.");
+            await Show.insertMany(showsWithImageUrls);
+            console.log("Seeded shows with image URLs.");
         }
     } catch (err) {
-        console.error('Error adding data:', err.message);
+        console.error('Error seeding data:', err.message);
     }
 })();
+
+module.exports = Show;
