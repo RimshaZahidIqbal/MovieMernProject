@@ -8,7 +8,7 @@ const Footer = () => {
                 <div>
                     <h2 className="text-red-500 text-xl font-bold mb-2">MovieVerse</h2>
                     <p className="text-sm text-gray-400">
-                        Your destination for top-rated movies, animes, and dramas. Powered by React & MongoDB.
+                        Your destination for top-rated movies, animes, and dramas. Made by Rimsha Zahid.
                     </p>
                 </div>
 
