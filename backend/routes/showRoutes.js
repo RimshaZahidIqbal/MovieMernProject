@@ -1,7 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const getAllShows = require("../controllers/showController");
+const { getAllShows, getAllShowsConstants } = require("../controllers/showController");
 
 router.get('/', getAllShows);
+router.get('/constant', getAllShowsConstants);
 
 module.exports = router;

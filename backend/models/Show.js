@@ -1,20 +1,8 @@
 const mongoose = require('mongoose');
 const fs = require('fs');
 const path = require('path');
+const { TYPES, GENRES, COUNTRIES } = require("../utils/showConstants");
 
-const GENRES = [
-    'Fantasy', 'Horror', 'Science fiction', 'Comedy', 'Mystery',
-    'Romance', 'Action/Adventure', 'Animation', 'Crime',
-    'Fairy tale', 'Thriller', 'Action', 'Dystopian', 'Drama',
-    'Historical Fiction', 'Legend', 'Space Western', 'Techno-thriller'
-];
-
-const COUNTRIES = [
-    'USA', 'UK', 'South Korea', 'Japan', 'India', 'China', 'Spain',
-    'Pakistan', 'Others'
-];
-
-const TYPES = ['Movie', 'Drama', 'Anime'];
 
 const showSchema = new mongoose.Schema({
     name: { type: String, required: true },
