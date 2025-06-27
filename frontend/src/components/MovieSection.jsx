@@ -16,7 +16,7 @@ export default function MovieSection({ shows }) {
 
                         <div className="relative w-full h-96 overflow-hidden rounded-xl z-10">
                             <img
-                                src={`${IMAGE_BASE_URL}${show.picture}`}
+                                src={`${IMAGE_BASE_URL}/api/${show.picture}`}
                                 alt={show.name}
                                 className="w-full h-full object-cover rounded-xl"
                             />

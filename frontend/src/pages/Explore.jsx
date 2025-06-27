@@ -19,8 +19,8 @@ export default function Explore() {
         const fetchData = async () => {
             try {
                 const [showsRes, constantsRes] = await Promise.all([
-                    api.get('/shows/'),
-                    api.get('/shows/constant')
+                    api.get('/api/shows/'),
+                    api.get('/api/shows/constant')
                 ]);
                 setShows(showsRes.data.shows);
                 setGenres(constantsRes.data.genres);
