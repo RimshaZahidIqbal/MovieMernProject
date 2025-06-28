@@ -6,6 +6,8 @@ A React-based movie browsing site with a dark theme and golden-red accents.
 * Movies, Dramas, Animes sections
 * Explore page with filters (year, type, country, genres)
 * Ratings and responsive layout
+* Paganation for better performance
+
 
 # Tech
 React, Tailwind CSS, Axios, React Router

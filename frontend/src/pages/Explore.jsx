@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { FaUndoAlt } from 'react-icons/fa';
+import { FaUndoAlt, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import api from '../utils/api';
 import { MovieSection } from '../components';
 
@@ -14,19 +14,23 @@ export default function Explore() {
         genres: []
     });
 
+    const [page, setPage] = useState(1);
+    const [totalPages, setTotalPages] = useState(1);
+    const limit = 12;
+
     useEffect(() => {
         const fetchShows = async () => {
             try {
-                const res = await api.get('/api/shows/');
+                const res = await api.get(`/api/shows?page=${page}&limit=${limit}`);
                 setShows(res.data.shows);
+                setTotalPages(res.data.totalPages);
             } catch (err) {
                 console.error('Error fetching shows:', err);
             }
         };
         fetchShows();
-    }, []);
+    }, [page]);
 
-    // Fetch constants 
     useEffect(() => {
         const fetchConstants = async () => {
             try {
@@ -52,6 +56,7 @@ export default function Explore() {
         } else {
             setFilters(prev => ({ ...prev, [name]: value }));
         }
+        setPage(1); // Reset to first page when filters change
     };
 
     const filtered = shows?.filter(show =>
@@ -66,7 +71,10 @@ export default function Explore() {
             <div className='flex justify-between'>
                 <h1 className="text-2xl font-bold text-yellow-400 mb-4">Explore Shows</h1>
                 <button
-                    onClick={() => setFilters({ year: '', type: '', country: '', genres: [] })}
+                    onClick={() => {
+                        setFilters({ year: '', type: '', country: '', genres: [] });
+                        setPage(1);
+                    }}
                     className="flex items-center gap-2 text-base m-1 bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition"
                 >
                     <FaUndoAlt />
@@ -75,34 +83,19 @@ export default function Explore() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-4 mb-6">
-                <select
-                    name="year"
-                    value={filters.year}
-                    onChange={handleFilter}
-                    className="p-2 bg-gray-800 text-white rounded w-full"
-                >
+                <select name="year" value={filters.year} onChange={handleFilter} className="p-2 bg-gray-800 text-white rounded w-full">
                     <option value="">All Years</option>
                     {Array.from({ length: 26 }, (_, i) => 2025 - i).map(year => (
                         <option key={year} value={year}>{year}</option>
                     ))}
                 </select>
-                <select
-                    name="type"
-                    value={filters.type}
-                    onChange={handleFilter}
-                    className="p-2 bg-gray-800 text-white rounded w-full"
-                >
+                <select name="type" value={filters.type} onChange={handleFilter} className="p-2 bg-gray-800 text-white rounded w-full">
                     <option value="">All Types</option>
                     <option value="Movie">Movie</option>
                     <option value="Drama">Drama</option>
                     <option value="Anime">Anime</option>
                 </select>
-                <select
-                    name="country"
-                    value={filters.country}
-                    onChange={handleFilter}
-                    className="p-2 bg-gray-800 text-white rounded w-full"
-                >
+                <select name="country" value={filters.country} onChange={handleFilter} className="p-2 bg-gray-800 text-white rounded w-full">
                     <option value="">All Countries</option>
                     {countries.map(c => (
                         <option key={c} value={c}>{c}</option>
@@ -134,6 +127,29 @@ export default function Explore() {
             </div>
 
             <MovieSection shows={filtered} />
+
+            {/* Pagination */}
+            <div className="flex justify-center mt-6 gap-6 items-center">
+                <button
+                    disabled={page === 1}
+                    onClick={() => setPage(prev => prev - 1)}
+                    className="flex items-center gap-1 text-red-500 underline text-sm md:text-base hover:text-red-400 disabled:opacity-40"
+                >
+                    <FaChevronLeft /> Previous
+                </button>
+
+                <span className="text-red-500 underline text-sm md:text-base">
+                    Page {page} of {totalPages}
+                </span>
+
+                <button
+                    disabled={page === totalPages}
+                    onClick={() => setPage(prev => prev + 1)}
+                    className="flex items-center gap-1 text-red-500 underline text-sm md:text-base hover:text-red-400 disabled:opacity-40"
+                >
+                    Next <FaChevronRight />
+                </button>
+            </div>
         </div>
     );
 }
